@@ -1,0 +1,28 @@
+/* Add to stock_in.php inside <style> tags */
+.recent-movements table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.recent-movements th,
+.recent-movements td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.recent-movements th:nth-child(1) { width: 15%; } /* Date */
+.recent-movements th:nth-child(2) { width: 35%; } /* Product */
+.recent-movements th:nth-child(3) { width: 15%; } /* Quantity */
+.recent-movements th:nth-child(4) { width: 20%; } /* Reference */
+.recent-movements th:nth-child(5) { width: 15%; } /* Notes */
+
+/* Better mobile responsiveness */
+@media (max-width: 768px) {
+    .recent-movements table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
