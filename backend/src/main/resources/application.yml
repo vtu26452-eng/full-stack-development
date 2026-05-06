@@ -1,0 +1,25 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb+srv://hashwanth:Hashu%40136@cluster0.dtgkh7c.mongodb.net/eventbooking?retryWrites=true&w=majority&appName=Cluster0}
+  application:
+    name: event-booking
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    # Change this secret to a strong random string in production (min 32 chars)
+    secret: ${JWT_SECRET:eventbooking-super-secret-jwt-key-2025-hashwanth-project-min64chars}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+
+resend:
+  # Get your API key from https://resend.com/api-keys
+  api-key: re_iWG4LYJD_Prp2rMc4rFwXnJuaEYZ7N9fU
+  # Must be a verified domain in your Resend account
+  from-email: onboarding@resend.dev
+
+logging:
+  level:
+    com.eventbooking: DEBUG
